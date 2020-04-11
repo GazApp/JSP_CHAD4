@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        Este comando "action" especifica la accion dicendole al sistema donde envie los datos del formulario
+        <br>
+        name= FirstName es muy importante se va a necesitar del lado del servidor
+        <form action ="student-respose.jsp">  
+            
+            first name = <input type ="text" name="FirstName" />
+            <br>
+            first name = <input type ="text" name="LastName" />
+             <br>
+            <input type ="submit" value = "Enviar"/>
+        </form>
+        
+        <br>
+        El elemento FORM en HTML  representa una sección del documento que contiene controles interactivos para enviar información.
+        
+        <h2> JSP FILE
+            <%= request.getParameter(“firstName”) %> <%= request.getParameter(“lastName”) %>
+            
+        ES IMPORTENTE LOS NOMBRES DEL FORMULARIO YA QUE EN BASE A ESTO SE RECOLECTAN LOS DATOS ENVIADOS
+        DESDE EL FORMULARIO CUANDO SE OPRIMI EL BOTON ENVIAR !!!</h2>
+         <BR>
+        
+        <h2>Alternate syntax: ${param.formFieldName}</h2>
+        <BR>
+        <h2>The student is confirmed: ${param.firstName} ${param.lastName}</h2>
+        
+    </body>
+</html>
